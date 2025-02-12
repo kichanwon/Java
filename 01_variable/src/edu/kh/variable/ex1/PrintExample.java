@@ -8,6 +8,12 @@ public class PrintExample {
 		 * %f %e %g
 		 * %A
 		 * %b
+		 * 
+		 * \t
+		 * \n
+		 * \\
+		 * \' \"
+		 * \u0041 A 
 		 */
 		int d = 1;
 		int o = 8;
@@ -21,5 +27,6 @@ public class PrintExample {
 		System.out.printf("%5c\n",c);
 		System.out.printf("%5s\n",str);
 		System.out.printf("%5b\n",b);
+		
 	}
 }
