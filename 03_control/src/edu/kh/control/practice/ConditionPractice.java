@@ -129,6 +129,13 @@ public class ConditionPractice {
 		System.out.printf("출석 횟수 : ");
 		int attendence = sc.nextInt();
 		
+		
+//		mid *= 0.2;
+//		fin *= 0.3;
+//		hw *= 0.3;
+//		attendence *= 1.0;
+//		float totalPoint = mid+fin+hw+attendence;
+
 		float midPoint = mid*0.2f;
 		float finPoint = fin*0.3f;
 		float hwPoint = hw*0.3f;
