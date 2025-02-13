@@ -51,9 +51,9 @@ public class OperatorPractice3 {
 			int money = sc.nextInt();
 			
 			System.out.println("50000원: " + money/50000);
-			System.out.println("10000원: " + ((money/50000)/10000)  );
-			System.out.println("5000원: " + (((money/50000)/10000)/5000)  );
-			System.out.println("1000원: " + ((((money/50000)/10000)/5000)/1000)  );	
+			System.out.println("10000원: " + ((money%50000)/10000)  );
+			System.out.println("5000원: " + (((money%50000)%10000)/5000)  );
+			System.out.println("1000원: " + ((((money%50000)%10000)%5000)/1000)  );	
 		}	
 	
 	
@@ -62,8 +62,6 @@ public class OperatorPractice3 {
 //사용자로부터 두 개의 정수를 입력받아, 
 //첫 번째 수가 두 번째 수의 배수인지 확인하고 결과를 출력해라
 //만약 배수라면 "배수입니다"를 출력하고, 아니라면 "배수가 아닙니다"를 출력
-//
-//메서드 : public void practice3() {}
 //
 //[실행화면]
 //첫 번째 수 : 100
@@ -74,15 +72,13 @@ public class OperatorPractice3 {
 //두 번째 수 : 7
 //배수가 아닙니다
 
-				System.out.printf("가격을 입력 하세요 : ");
-				int price = sc.nextInt();
+				System.out.printf("첫 번째 수 : ");
+				int num1 = sc.nextInt();
+
+				System.out.printf("두 번째 수 : ");
+				int num2 = sc.nextInt();
 				
-				System.out.printf("멤버십 있으세요? (있으면 true / 없으면 false 입력) : ");
-				boolean member = sc.nextBoolean();
-			
-				System.out.printf("할인을 포함한 최종금액 : ");
-			
-				System.out.printf(member==true ? "%.1f":"%.1f"+"\n",price*0.9,price*1.0);		
+				System.out.printf(num1/num2!=0 ? "배수입니다.":"배수가 아닙니다.");
 			}	
 }
 
