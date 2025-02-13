@@ -139,26 +139,21 @@ public class ConditionPractice {
 		System.out.println("================= 결과 =================");
 
 		
-		if(totalPoint<=70||attendence*1.0<20-20*0.3) {
-			if(attendence*1.0<20-20*0.3) {
-				System.out.printf("Fail [출석 횟수 부족(%d/20)]",attendence);
-			}else {
-				System.out.printf("중간 고사 점수(20) : %.1f\n",midPoint);
-				System.out.printf("기말 고사 점수(30) : %.1f\n",finPoint);
-				System.out.printf("과제 점수\t(30) : %.1f\n",hwPoint);
-				System.out.printf("출석 점수\t(20) : %.1f\n",attendencPoint);
-				System.out.printf("총점: %.1f\n",totalPoint);
-				System.out.printf("Fail [점수 미달]");
-			}
+		if(attendence<=20*0.7) {
+			System.out.printf("Fail [출석 횟수 부족(%d/20)]",attendence);
 		}else {
 			System.out.printf("중간 고사 점수(20) : %.1f\n",midPoint);
 			System.out.printf("기말 고사 점수(30) : %.1f\n",finPoint);
 			System.out.printf("과제 점수\t(30) : %.1f\n",hwPoint);
 			System.out.printf("출석 점수\t(20) : %.1f\n",attendencPoint);
 			System.out.printf("총점: %.1f\n",totalPoint);
-			System.out.printf("PASS");
+			
+			if(totalPoint<=70) {
+			System.out.printf("Fail [점수 미달]");
+			}else {
+				System.out.printf("PASS");
+			}
 		}
+	
 	}
-	
-	
 }
