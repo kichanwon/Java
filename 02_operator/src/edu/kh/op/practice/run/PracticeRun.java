@@ -24,12 +24,14 @@ public class PracticeRun {
 					+ "0 to exit\n->");
 			num = sc.nextInt();
 			switch (num) {
+			case 0: {
+				break;
+			}
 			case 1: {
 				op.practice1();
 				break;
 			}
 			case 2: {
-				op.practice2();
 				break;
 			}
 			case 3: {
@@ -56,5 +58,6 @@ public class PracticeRun {
 				throw new IllegalArgumentException("Unexpected value: " + num);
 			}
 		} while (num!=0);
+		System.out.println("\nEnd...\n");
 	}
 }

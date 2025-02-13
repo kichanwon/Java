@@ -49,5 +49,7 @@ public class OperatorPractice {
 		System.out.printf("\n"
 				+ "합계 : %d\n"
 				+ "평균 : %.1f",sum,sum/3.0);
+		
+		System.out.println(kor>=40 && eng>=40 && math>=40 && sum/3>=60 ? "합격입니다.":"불합격입니다.");
 	}
 }
