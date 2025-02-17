@@ -2,8 +2,14 @@ package edu.kh.control.loop;
 
 public class LoopRun {
 	public static void main(String[] args) {
+		
 		ForExample forEx = new ForExample();
-		forEx.ex4();
+		WhileExample whileEx = new WhileExample();
+		
+//		forEx.ex4();
+		
+		whileEx.ex2();
 
+		
 	}
 }
