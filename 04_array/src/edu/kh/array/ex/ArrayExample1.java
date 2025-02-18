@@ -246,10 +246,15 @@ public class ArrayExample1 {
 		System.out.println(str);
 		System.out.println(""+str);
 		
-		char[][] arr = {{'a','b','c'},
-				{'ㄱ','ㄴ','ㄷ'}};
-
+		char[] row1= {'a','b','c'};
+		char[] row2= {'ㄱ','ㄴ','ㄷ'};
+		char[][] arr = {row1,
+				row2};
+		
 		System.out.println(arr);
+		System.out.println(""+row1);
+		System.out.println(""+row2);
+
 	}
 /////////////////////////////////////////////////////////////
 

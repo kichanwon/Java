@@ -7,7 +7,7 @@ public class ArrayRun {
 		
 //		arrayEx2.shallowCopy();
 //		arrayEx2.deepCopy();
-		arrayEx2.createLottoNum();
+//		arrayEx2.createLottoNum();
 		
 		
 //		arrayEx.ex1();
@@ -19,7 +19,7 @@ public class ArrayRun {
 //		arrayEx.ex7();
 //		arrayEx.ex8();
 //		arrayEx.ex9();
-//		arrayEx.a();
+		arrayEx.a();
 //		arrayEx.b();
 	}
 }

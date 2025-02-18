@@ -20,7 +20,7 @@ public class PracticeService {
 		}
 		System.out.println("\n짝수 번째 인덱스 합 : "+sum);
 	}
-	
+
 	public void practice2() {
 		int[] arr = new int[9];
 		int sum=0;
@@ -44,20 +44,13 @@ public class PracticeService {
 			System.out.printf("%d ",arr[i]);
 		}
 	}
-	
+
 	public void practice4() {
 		int[] arr = new int[5];
-		System.out.printf("입력 0 : ");
-		arr[0] = sc.nextInt();
-		System.out.printf("입력 1 : ");
-		arr[1] = sc.nextInt();
-		System.out.printf("입력 2 : ");
-		arr[2] = sc.nextInt();
-		System.out.printf("입력 3 : ");
-		arr[3] = sc.nextInt();
-		System.out.printf("입력 4 : ");
-		arr[4] = sc.nextInt();
-	
+		for(int i=0;i<arr.length;i++) {
+			System.out.printf("입력 %d : ",i);
+			arr[i] = sc.nextInt();
+		}
 		System.out.printf("검색할 값 : ");
 		int search = sc.nextInt();
 		boolean flag = false;
@@ -71,6 +64,7 @@ public class PracticeService {
 		if(flag==false) System.out.println("일치하는 값이 존재하지 않습니다.");
 	}
 	
+
 	public void practice5() {
 		System.out.printf("문자열 : ");
 		String str = sc.nextLine();
@@ -94,6 +88,7 @@ public class PracticeService {
 		System.out.println("\ni 개수 : "+count);
 	}
 	
+
 	public void practice6() {
 		System.out.printf("정수 : ");
 		int num = sc.nextInt();
@@ -112,6 +107,7 @@ public class PracticeService {
 		System.out.println("\n총 합 : "+sum);
 	}
 	
+	
 	public void practice7() {
 		System.out.printf("주민등록번호(-포함) : ");
 		String str = sc.next();
@@ -127,6 +123,7 @@ public class PracticeService {
 		}
 		
 	}
+
 
 	public void practice8() {
 
@@ -149,6 +146,7 @@ public class PracticeService {
 		}
 	}
 	
+
 	public void practice9() {
 		int[] arr=new int[10];
 		
@@ -163,6 +161,7 @@ public class PracticeService {
 		}
 	}
 	
+
 	public void practice10() {
 		int[] arr=new int[10];
 		int max=arr[0];
@@ -185,6 +184,7 @@ public class PracticeService {
 		System.out.println("최소값 : "+min);
 	}
 	
+
 	public void practice11() {
 		int[] arr=new int[10];
 		
@@ -202,6 +202,7 @@ public class PracticeService {
 		}
 	}
 	
+
 	public void practice12() {
 		int[] arr=new int[6];
 		
@@ -220,6 +221,7 @@ public class PracticeService {
 		}
 	}
 	
+
 	public void practice13() {
 		System.out.printf("문자열 : ");
 		String str = sc.next();
@@ -246,6 +248,7 @@ public class PracticeService {
 		}
 		System.out.printf("\n문자 개수 : %d ",count);
 	}
+
 
 	public void practice14() {
 		System.out.printf("배열의 크기를 입력하세요 : ");
