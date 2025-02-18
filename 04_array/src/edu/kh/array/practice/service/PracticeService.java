@@ -224,14 +224,12 @@ public class PracticeService {
 
 	public void practice13() {
 		System.out.printf("문자열 : ");
-		String str = sc.next();
+		String str = sc.nextLine();
 		char[] arr = new char[str.length()];
-		int count = 0;
+		int count = 1;
 		
 		for(int i=0;i<str.length();i++) {
 			arr[i]=str.charAt(i);
-			
-			//application
 			
 			for(int j=0;j<i;j++) {
 				if(arr[i]==arr[j]) {
@@ -241,8 +239,9 @@ public class PracticeService {
 		}
 		
 		for(int i=0;i<arr.length;i++) {
-			if(arr[i]!=' ') {
-				System.out.printf("%c, ",arr[i]);
+			if (i==0)System.out.printf("%c",arr[i]);
+			if(arr[i]!=' '&&i!=0) {
+				System.out.printf(", %c",arr[i]);
 				count++;
 			}
 		}
@@ -274,12 +273,53 @@ public class PracticeService {
 			sc.nextLine();
 			plusArr = Arrays.copyOf(arr, num+plus);
 			
-			for(int i=num;i<plusArr.length;i++) {
+			for(int i=arr.length;i<plusArr.length;i++) {
 				System.out.printf("%d번째 문자열 : ",i+1);
 				plusArr[i] = sc.nextLine();
 			}
+			arr=plusArr;
+		}	
+		System.out.println(Arrays.toString(arr));
+	}
+/*
+	public void practice14_1() {
+		System.out.printf("배열의 크기를 입력하세요 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
+		String[] arr = new String[num];
+		
+		for(int i=0;i<arr.length;i++) {
+			System.out.printf("%d번째 문자열 : ",i+1);
+			arr[i] = sc.nextLine();
+		}
+		while(true) {
+			char input;
+			System.out.printf("더 값을 입력하시겠습니까?(Y/N) : ");
+			input = sc.next().charAt(0);
+			sc.nextLine();
+			
+			if (input=='y'||input=='Y') {
+				System.out.printf("더 입력하고 싶은 개수 : ");
+				int plus = sc.nextInt();
+				sc.nextLine();
+				String[] plusArr = new String[arr.length+plus];
+
+				
+				for(int i=0;i<plusArr.length;i++) {
+					plusArr[i] = arr[i];
+				}
+				
+				for(int i=num;i<plusArr.length;i++) {
+					System.out.printf("%d번째 문자열 : ",i+1);
+					plusArr[i] = sc.nextLine();
+				}
+			}else if(input=='n'||input=='N') {
+				break;
+			}else System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
 		}	
 		System.out.println(Arrays.toString(plusArr));
 	}
-
+	
+*/
+	
 }
