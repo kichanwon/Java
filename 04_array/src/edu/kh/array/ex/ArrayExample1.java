@@ -254,6 +254,7 @@ public class ArrayExample1 {
 		System.out.println(arr);
 		System.out.println(""+row1);
 		System.out.println(""+row2);
+		System.out.println(Arrays.deepToString(arr));
 
 	}
 /////////////////////////////////////////////////////////////
