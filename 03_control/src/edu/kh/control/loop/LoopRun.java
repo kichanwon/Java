@@ -1,5 +1,6 @@
 package edu.kh.control.loop;
 
+<<<<<<< HEAD
 public class LoopRun { // 실행용 클래스
 
 	public static void main(String[] args) {
@@ -20,3 +21,18 @@ public class LoopRun { // 실행용 클래스
 	}
 
 }
+=======
+public class LoopRun {
+	public static void main(String[] args) {
+		
+		ForExample forEx = new ForExample();
+		WhileExample whileEx = new WhileExample();
+		
+//		forEx.ex4();
+		
+		whileEx.ex2();
+
+		
+	}
+}
+>>>>>>> ca370efb7f5870e64410c0c03377818e84e4232b

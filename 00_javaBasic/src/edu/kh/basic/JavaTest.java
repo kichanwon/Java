@@ -1,5 +1,6 @@
 package edu.kh.basic;
 
+<<<<<<< HEAD
 // git 테스트! 집에서 코드 변경해봄
 // 학원에서 공부함..
 
@@ -67,3 +68,14 @@ public class JavaTest {
 	}
 	
 }
+=======
+public class JavaTest {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+		System.out.println("ctrl F11");
+		System.out.println("syso ctrl space");
+		System.out.println("ctrl alt up,down");
+	}
+}
+
+>>>>>>> ca370efb7f5870e64410c0c03377818e84e4232b

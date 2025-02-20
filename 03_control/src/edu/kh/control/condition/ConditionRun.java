@@ -1,5 +1,6 @@
 package edu.kh.control.condition;
 
+<<<<<<< HEAD
 public class ConditionRun { // 실행용 클래스
 
 	public static void main(String[] args) {
@@ -17,4 +18,12 @@ public class ConditionRun { // 실행용 클래스
 		//condition.ex10();
 	}
 
+=======
+public class ConditionRun {
+	public static void main(String[] args) {
+		ConditionExample ce = new ConditionExample();
+		
+		ce.ex8();
+	}
+>>>>>>> ca370efb7f5870e64410c0c03377818e84e4232b
 }

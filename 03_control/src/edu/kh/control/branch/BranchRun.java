@@ -1,6 +1,7 @@
 package edu.kh.control.branch;
 
 public class BranchRun {
+<<<<<<< HEAD
 
 	public static void main(String[] args) {
 		
@@ -12,4 +13,11 @@ public class BranchRun {
 		branchEx.RSPGame();
 	}
 
+=======
+	public static void main(String[] args) {
+		BranchExample branchEx = new BranchExample();
+		
+		branchEx.RSPGame();
+	}
+>>>>>>> ca370efb7f5870e64410c0c03377818e84e4232b
 }
