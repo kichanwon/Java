@@ -27,8 +27,18 @@ public class Run {
 		stdArr[1]=new Student("김말똥", 21, 187.3, 80.0, 2, "경영학과");
 		stdArr[2]=new Student("강개순", 23, 167.0, 45.0, 4, "정보통신공학과");
 		
-		for(int i=0;i<stdArr.length;i++) {
-			System.out.println(stdArr[i].information());
+//		for(int i=0;i<stdArr.length;i++) {
+//			System.out.println(stdArr[i].information());
+//		}
+		
+/*		
+ * 향상된 for 문
+ * 		for(DataType DataName : Array,collection){
+ * 			code
+ * 		}
+ */
+		for(Student std:stdArr) {
+			System.out.println(std.information());
 		}
 		
 		System.out.println("======================================================================================================");
@@ -36,6 +46,7 @@ public class Run {
 		
 		Employee[] empArr = new Employee[10];
 		int count=0;
+				
 		
 		do {
 			System.out.print("이름 : ");
@@ -67,8 +78,6 @@ public class Run {
 				break;
 			}else System.out.println("잘못된 입력입니다.");
 		} while (true);
-		
-
 		
 	/*
 	 		System.out.print("이름 : ");

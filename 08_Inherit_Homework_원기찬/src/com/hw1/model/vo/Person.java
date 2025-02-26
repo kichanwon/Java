@@ -6,7 +6,7 @@ public class Person {
 	private double height;
 	private double weight;
 	
-		public String getName() {
+	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
