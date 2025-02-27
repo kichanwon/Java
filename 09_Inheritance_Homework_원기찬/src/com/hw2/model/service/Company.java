@@ -11,6 +11,7 @@ public class Company implements ManagementSystem{
 		employees=new Employee[size];
 		employeeCount=0;
 	}
+	
 	@Override
 	public void addPerson(Person person) { // 업캐스팅
 		// 매개변수로 들어온 person이 Employee인지 체크
@@ -24,6 +25,7 @@ public class Company implements ManagementSystem{
 		}
 
 	}
+	
 	@Override
 	public void removePerson(String id) {
 
@@ -49,22 +51,24 @@ public class Company implements ManagementSystem{
 		System.out.println("ID : " + id + "인 직원을 찾을 수 없습니다.");
 
 	}
-/*	
-	@Override
-	public void addPerson(Person person) {
-		for(int i=0;i<employees.length;i++) {
-			if(employees[i]==null) {
-				employees[i]=(Employee)person;
-				System.out.println(person.getInfo());
-				employeeCount++;
-				break;
-			}else {
-				System.out.println("인원이 모두 충원되었습니다.");
-				break;
-			}
-		}
-	}
 
+//	@Override
+//	public void addPerson(Person person) {
+//		for(int i=employeeCount;i<employees.length;i++) {
+//			if(employees[i]==null) {
+//				employees[i]=(Employee)person;
+//				System.out.println(person.getInfo());
+//				employeeCount++;
+//				break;
+//			}else {
+//				System.out.println("인원이 모두 충원되었습니다.");
+//				break;
+//			}
+//		}
+//	}
+
+	
+/*
 	@Override
 	public void removePerson(String id) {
 		for(int i=0;i<employeeCount;i++) {
