@@ -170,6 +170,7 @@ public class BookService {
 
 		System.out.print("수정할 도서 번호를 입력하세요 : ");
 		int bookNum = sc.nextInt();
+		int index = 0;
 
 		boolean flag = true;
 
@@ -177,6 +178,7 @@ public class BookService {
 
 			if (temp.getBookNum() == bookNum) {
 				// 입력한 도서번호와 도서 목록의 도서 번호가 일치하는걸 찾았을때
+				index=library.indexOf(temp);
 
 				flag = false;
 
@@ -233,7 +235,7 @@ public class BookService {
 		if (flag) {
 			return "일치하는 도서 번호가 없습니다.";
 		}
-		System.out.println(library);
+		System.out.println(library.get(index));
 		return "수정 완료";
 	}
 
@@ -301,7 +303,7 @@ public class BookService {
 				char answer = sc.next().toUpperCase().charAt(0); // "y" -> "Y" -> 'Y'
 
 				if (answer == 'Y') {
-					favList.add(library.get(favNum));
+					favList.add(library.get(index));
 					break;
 				} else {
 					return "취소하셨습니다.";
@@ -321,10 +323,10 @@ public class BookService {
 		System.out.println("========즐겨찾기 도서 등록=========");
 
 		System.out.println("========도서 목록=========");
-		showBookList(library);
+		showBookList(favList);
 
 		
-		System.out.print("즐겨찾기에 추가할 책번호를 입력하세요 : ");
+		System.out.print("삭제할 책번호를 입력하세요 : ");
 		int favNum = sc.nextInt();
 		
 		for (Book temp : library) {
@@ -335,12 +337,12 @@ public class BookService {
 
 				System.out.println("index 번호 : " + index);
 
-				System.out.print("추가하시겠습니까? (Y/N) : ");
+				System.out.print("삭제하시겠습니까? (Y/N) : ");
 
 				char answer = sc.next().toUpperCase().charAt(0); // "y" -> "Y" -> 'Y'
 
 				if (answer == 'Y') {
-					
+					favList.remove(index);
 					break;
 				} else {
 					return "취소하셨습니다.";
@@ -350,7 +352,7 @@ public class BookService {
 		}
 		
 
-		return "등록 완료";
+		return "삭제 완료";
 	}
 	
 	/**
