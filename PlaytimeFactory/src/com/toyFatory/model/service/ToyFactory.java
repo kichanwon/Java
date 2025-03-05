@@ -155,7 +155,6 @@ public class ToyFactory {
 		System.out.print("제조일 (YYYYMMDD 형식으로 입력) : ");
 		String manufactureDate = sc.nextLine();
 		
-		// 재료 저장할 컬렉션
 		Set<String> materials = new HashSet<String>();
 		while(true) {
 			
@@ -165,6 +164,13 @@ public class ToyFactory {
 			if(input.equals("q")) {
 				break;
 			}
+			
+// 맵에 재료가 있는지 확인 없으면 다음 사용 가능한 키에 추가
+			if (!map.containsValue(input)) {
+	            int nextKey = map.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
+	            map.put(nextKey, input);
+	            System.out.println("새로운 재료가 추가되었습니다: " + input + " (키: " + nextKey + ")");
+	        }
 			
 			materials.add(input);
 
@@ -183,26 +189,28 @@ public class ToyFactory {
 
 	 */
 	public void deleteToy() {
-		System.out.println("<장난감 삭제>");
-		
-		displayToy();
+	    System.out.println("<장난감 삭제>");
+	    
+	    displayToy(); // Display current toys list
+	    
+	    System.out.print("삭제할 장난감의 이름을 입력하세요 : ");
+	    String deleteName = sc.nextLine();
+	    boolean flag = true;
 
-		System.out.print("삭제할 장난감의 이름을 입력하세요 : ");
-		String deleteName = sc.nextLine();
-		boolean flag=true;
+	    Iterator<Toy> iterator = toySet.iterator();
+	    while (iterator.hasNext()) {
+	        Toy toy = iterator.next();
+	        if (toy.getToyName().equals(deleteName)) {
+	            iterator.remove(); // Correct way to remove an element during iteration
+	            System.out.println(deleteName + "이/가 삭제되었습니다.");
+	            flag = false;
+	            break;
+	        }
+	    }
 
-		Iterator<Toy> iterator = toySet.iterator();
-		while(iterator.hasNext()) {
-			String tempName = iterator.next().getToyName();
-			if ( deleteName.equals(tempName) ) {
-				System.out.println(tempName+"이/가 삭제되었습니다.");
-				flag=false;
-			}
-		}
-		if(flag) {
-			System.out.println("입력한 장난감이 존재하지 않습니다.");
-		}
-		
+	    if (flag) {
+	        System.out.println("입력한 장난감이 존재하지 않습니다.");
+	    }
 	}
 
 	/**
