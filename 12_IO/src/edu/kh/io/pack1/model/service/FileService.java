@@ -1,5 +1,10 @@
 package edu.kh.io.pack1.model.service;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+
 public class FileService {
 	/* File 클래스
 	 *
@@ -62,10 +67,72 @@ public class FileService {
 	 *
 	 * 2) 상대 경로 : 현재 위치를 기준으로 목표까지의 경로를 표기하는 방법
 	 *
-	 *
+	 * / = \\
+	 * 
 	 * */
 	
 
+	public void method1() {
+		
+		File dir = new File("/io_test/20250305");
+		
+		if(!dir.exists()) {
+			dir.mkdirs();
+			
+			System.out.println(dir.getName());
+			System.out.println(dir.getPath());
+		}
+	}
+	
+	public void method2() {
+		
+		File file = new File("\\io_test\\20250305\\file_create.txt");
+		
+		if(!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.println(file.getName());
+			System.out.println(file.getPath());
+		}
+	}
+	
+	public void method3() {
+		
+		File dir = new File("\\io_test\\20250305");
+		
+		File[] files = dir.listFiles();
+		
+//		System.out.println(Arrays.toString(files));
+		
+		for(File f:files) {
+			
+			String fileName = f.getName();
+			
+			long lastModified = f.lastModified();
+			
+//			java.text.SimpleDateFormat : 간단한 날짜 형식을 지저할 수 있는 객체
+			SimpleDateFormat dateFormet = new SimpleDateFormat("yyyy-MM-dd a h:mm");
+			String date = dateFormet.format(lastModified);
+			
+			String type=null;
+			if(f.isFile())	type="file";
+			else			type="folder";
+			
+			String size = f.length()+"B";
+			if(f.isDirectory()) size="";
+			
+			String result = String.format("%-20s %-20s %-5s %10s",
+					fileName,date,type,size);
+			
+			System.out.println(result);
+		}
+		
+	}
 
 
 }
