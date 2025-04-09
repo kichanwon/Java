@@ -20,35 +20,37 @@ public class ByteService {
 //			파일 존재 X 시 생성 (폴더는 생성 불가) -> 파일 존재시 내용덮어쓰기
 //			fos = new FileOutputStream("/io_test/20250305/byte_test.txt");
 			fos = new FileOutputStream("/io_test/20250305/byte_test1.txt");
-			StringBuilder sb = new StringBuilder();
 			
-			sb.append("Hello World?\n");
-			sb.append("¿Que pasa?\n");
-			sb.append("¿몰루?\n");
+//			StringBuilder sb = new StringBuilder();
+//			
+//			sb.append("Hello World?\n");
+//			sb.append("¿Que pasa?\n");
+//			sb.append("¿몰루?\n");
+//			
+//			String content = sb.toString();
 			
-			String content = sb.toString();
-//			for (int i=0; i<content.length();i++) {
-//				char ch = content.charAt(i);
-//				fos.write(ch);
-//			}
-			
-			
-			long start = System.nanoTime();
-			fos.write(content.getBytes());
-			long fin = System.nanoTime();
+			String content = "안녕하세요!";
+			for (int i=0; i<content.length();i++) {
+				fos.write(content.charAt(i));
+			}
 			
 			
-			
-			fos.flush();	//	선택사항
-
-			System.out.println("수행시간 : "+(fin-start));
-			System.out.println("출력 완료!");
+//			long start = System.nanoTime();
+//			fos.write(content.getBytes());
+//			long fin = System.nanoTime();
+//			
+//			
+//			
+//			fos.flush();	//	선택사항
+//
+//			System.out.println("수행시간 : "+(fin-start));
+//			System.out.println("출력 완료!");
 			
 		
 		} catch (IOException e) {
 			e.printStackTrace();
 			
-		} finally {
+		} /*finally {
 			
 			try {
 				if(fos!= null)fos.close();	//	try 실패시 초기에 fos를 null 로 생성했으니 if 로 검사
@@ -57,7 +59,7 @@ public class ByteService {
 				e.printStackTrace();
 			}
 			
-		}
+		}*/
 	}
 		
 	public void bufferdFileByteOutput() {

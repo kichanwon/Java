@@ -8,14 +8,14 @@ public class ByteRun {
 	
 		ByteService bs = new ByteService();
 
-//		bs.fileByteOutput();
+		bs.fileByteOutput();
 //		bs.bufferdFileByteOutput();
 //		
 //		bs.fileByteInput();
 //		bs.bufferedFileByteInput();
 
 //		bs.readProperties();
-		bs.filecopy();
+//		bs.filecopy();
 	
 	}
 	
